@@ -1,0 +1,15 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: vetflow-postgres
+    environment:
+      POSTGRES_DB: vetflow
+      POSTGRES_USER: vetflow
+      POSTGRES_PASSWORD: vetflow
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+volumes:
+  postgres_data:

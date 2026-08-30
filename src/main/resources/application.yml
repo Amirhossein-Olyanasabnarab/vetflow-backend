@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: vetflow-backend
+
+  datasource:
+    url: jdbc:postgresql://localhost:5433/vetflow
+    username: vetflow
+    password: vetflow
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+
+  flyway:
+    enabled: true
