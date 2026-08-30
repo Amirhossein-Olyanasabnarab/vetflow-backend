@@ -46,6 +46,22 @@ public class Owner {
     @Column(name = "updated_at", nullable = false)
     private Instant updatedAt;
 
+    public static Owner create(
+            String firstName,
+            String lastName,
+            String phoneNumber,
+            String email,
+            String address
+    ){
+        Owner owner = new Owner();
+        owner.firstName = firstName;
+        owner.lastName = lastName;
+        owner.phoneNumber = phoneNumber;
+        owner.email = email;
+        owner.address = address;
+        return owner;
+    }
+
     @PrePersist
     void onCreate(){
         Instant now = Instant.now();
